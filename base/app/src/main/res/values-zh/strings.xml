@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simplified Chinese localization for Myspoti; keep resource names and format specifiers unchanged. -->
+<resources>
+    <string name="aa_playlists">歌单</string>
+    <string name="aa_albums">专辑</string>
+    <string name="aa_artists">艺人</string>
+    <string name="aa_podcasts">播客</string>
+    <string name="settings_amoled_theme">AMOLED 纯黑主题</string>
+    <string name="settings_amoled_theme_subtitle">使用纯黑背景以节省电量</string>
+    <string name="settings_lyrics_style_spotify_default">Spotify 默认</string>
+    <string name="settings_lyrics_style_fullscreen">全屏（专辑配色）</string>
+    <string name="settings_lyrics_style_compact">紧凑</string>
+    <string name="settings_lyrics_style_karaoke">卡拉 OK</string>
+    <string name="settings_lyrics_style_bold">加粗大字</string>
+    <string name="main_update_available">有新版本可用</string>
+    <string name="notif_channel_media_name">媒体播放</string>
+    <string name="notif_channel_media_description">Myspoti 媒体播放控制</string>
+    <string name="notif_action_previous">上一首</string>
+    <string name="notif_action_next">下一首</string>
+    <string name="notif_action_play">播放</string>
+    <string name="notif_action_pause">暂停</string>
+    <string name="notif_shuffle_enable">开启随机播放</string>
+    <string name="notif_shuffle_disable">关闭随机播放</string>
+    <string name="notif_shuffle_disable_smart">关闭智能随机播放</string>
+    <string name="notif_action_like">喜欢</string>
+    <string name="notif_action_unlike">取消喜欢</string>
+    <string name="notif_unknown_name">未知</string>
+    <string name="notif_by_artist">艺人：%1$s</string>
+    <string name="notif_repeat_disable">关闭循环播放</string>
+    <string name="notif_repeat_disable_one">关闭单曲循环</string>
+    <string name="notif_repeat_enable">开启循环播放</string>
+    <string name="bridge_player_unlocked">播放器已解锁</string>
+    <string name="bridge_reloading">正在重新加载…</string>
+    <string name="service_disabled_message">服务未启用</string>
+    <string name="energy_saver_title">省电模式</string>
+    <string name="energy_saver_summary">关闭 Canvas，使用更轻量的视频和动画</string>
+    <string name="video_fullscreen_enter">进入全屏</string>
+    <string name="video_fullscreen_exit">退出全屏</string>
+    <string name="playback_seek_description">播放进度</string>
+    <string name="account_page_title">Spotify 账户</string>
+    <string name="account_page_detail">在 spotify.com 查看订阅方案、隐私及设备</string>
+</resources>
