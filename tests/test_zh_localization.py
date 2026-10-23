@@ -25,6 +25,11 @@ class LocalizationTests(unittest.TestCase):
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copytree(ROOT / folder, dest)
         self.main = self.project / 'base/app/src/main/res/values-zh/myspoti_strings.xml'
+        settings_rel = Path('base/app/src/main/java/com/music/spotui/ui/screens/SettingsScreen.kt')
+        self.settings = self.project / settings_rel
+        if (ROOT / settings_rel).exists():
+            self.settings.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(ROOT / settings_rel, self.settings)
 
     def check(self):
         return subprocess.run([sys.executable, str(SCRIPT), '--project', str(self.project)], text=True, capture_output=True)
@@ -62,6 +67,27 @@ class LocalizationTests(unittest.TestCase):
         result = self.check()
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('duplicate', result.stderr.lower())
+
+    def test_crossfade_chip_row_regression_fails(self):
+        if not self.settings.exists():
+            self.skipTest('Full Kotlin source is not in the patch-only test fixture')
+        code = self.settings.read_text(encoding='utf-8')
+        self.assertIn('        FlowRow(', code)
+        self.settings.write_text(code.replace('        FlowRow(', '        Row(', 1), encoding='utf-8')
+        result = self.check()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('settings-crossfade-chip-wrap-zh', result.stderr)
+
+    def test_crossfade_chip_multiline_regression_fails(self):
+        if not self.settings.exists():
+            self.skipTest('Full Kotlin source is not in the patch-only test fixture')
+        code = self.settings.read_text(encoding='utf-8')
+        nowrap = '                    maxLines = 1,\n                    softWrap = false,\n'
+        self.assertIn(nowrap, code)
+        self.settings.write_text(code.replace(nowrap, '', 1), encoding='utf-8')
+        result = self.check()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('settings-crossfade-chip-wrap-zh', result.stderr)
 
 
 if __name__ == '__main__':
