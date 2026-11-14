@@ -16,7 +16,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/HypnosysNyx/myspoti/releases"><b>⬇ 查看中文版 APK / 发布记录</b></a> ·
+  <a href="https://github.com/HypnosysNyx/myspoti/releases/download/v2.0.2-beta.3-zh.1/myspoti-2.0.2-beta.3-zh.1-android-debug.apk"><b>⬇ 直接下载中文体验 APK</b></a> ·
+  <a href="https://github.com/HypnosysNyx/myspoti/releases/tag/v2.0.2-beta.3-zh.1"><b>📦 v2.0.2-beta.3-zh.1 发布页</b></a> ·
   <a href="docs/releases/v2.0.2-beta.3-zh.1.md"><b>📄 中文版发布说明</b></a> ·
   <a href="https://github.com/HypnosysNyx/myspoti/tree/i18n/zh-hans"><b>🀄 汉化源代码</b></a> ·
   <a href="https://github.com/HypnosysNyx/myspoti/issues"><b>🐛 问题反馈</b></a> ·
@@ -47,7 +48,7 @@ Myspoti 是自行安装的 Android 应用。你使用自己的 Spotify 账号，
 
 **系统要求：Android 10 或更高版本。**
 
-1. 打开 [本仓库 Releases](https://github.com/HypnosysNyx/myspoti/releases)，寻找标明「简体中文 / zh-CN」并**附带 `.apk` 文件**的版本。若列表没有该文件，说明当前没有可直接安装的汉化 APK，请按[自行编译](#自行编译中文版)操作。
+1. 下载已发布的 [Myspoti v2.0.2-beta.3-zh.1 中文体验 APK](https://github.com/HypnosysNyx/myspoti/releases/download/v2.0.2-beta.3-zh.1/myspoti-2.0.2-beta.3-zh.1-android-debug.apk)（约 100.6 MB），或在[对应 Release](https://github.com/HypnosysNyx/myspoti/releases/tag/v2.0.2-beta.3-zh.1) 的 Assets 中选择 APK。可选：对照 [SHA256SUMS.txt](https://github.com/HypnosysNyx/myspoti/releases/download/v2.0.2-beta.3-zh.1/SHA256SUMS.txt) 校验完整性。**本版采用开发版 Debug 签名，未宣称为正式稳定版**。其他版本以 Releases 中实际存在的 APK 附件为准。
 2. 下载 APK，使用 Android 文件管理器打开；第一次安装时系统可能要求允许该来源安装应用。
 3. 启动后选择使用 Spotify 登录，并在**设置 → 显示与语言 → 应用语言**选择简体中文，或使用系统简体中文语言。
 4. 根据需要设置音质、通知、蓝牙、文件访问等选项。
