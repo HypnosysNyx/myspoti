@@ -32,6 +32,12 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v6
 
+      # Check Chinese resources before compiling the Android app.
+      - name: Simplified Chinese localization QA
+        run: |
+          python3 ../tools/check_zh_localization.py --project ..
+          python3 -m unittest discover -s ../tests -p 'test_zh_localization.py'
+
       # App unit tests, plus the JVM modules (API contracts, ad block, offline index, GraphQL
       # errors). The live tests in host-cdp skip themselves without a browser to drive.
       - name: Unit tests

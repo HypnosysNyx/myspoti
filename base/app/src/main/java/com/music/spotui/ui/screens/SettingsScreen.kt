@@ -11,6 +11,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -273,9 +274,12 @@ private fun CrossfadeRow() {
             color = Color(0xFFB3B3B3), fontSize = 12.sp,
             modifier = Modifier.padding(top = 2.dp),
         )
-        Row(
+        // Wrap whole chips when font scaling or a narrow screen cannot fit all five.
+        // A single Row squeezes the last Text so "12 秒" becomes vertical glyphs.
+        FlowRow(
             horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(8.dp),
-            modifier = Modifier.padding(top = 10.dp),
+            verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(8.dp),
+            modifier = Modifier.fillMaxWidth().padding(top = 10.dp),
         ) {
             for (v in listOf(0, 3, 6, 9, 12)) {
                 val selected = pref.seconds == v
@@ -283,6 +287,8 @@ private fun CrossfadeRow() {
                     if (v == 0) stringResource(R.string.settings_crossfade_off)
                     else stringResource(R.string.settings_crossfade_seconds, v),
                     color = if (selected) Color.Black else Color.White, fontSize = 14.sp,
+                    maxLines = 1,
+                    softWrap = false,
                     modifier = Modifier.clip(androidx.compose.foundation.shape.RoundedCornerShape(50))
                         .background(if (selected) com.music.spotui.ui.theme.AppAccent else Color(0xFF2A2A2A))
                         .clickable { pref.set(ctx, v) }
