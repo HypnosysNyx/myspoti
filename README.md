@@ -17,6 +17,7 @@
 
 <p align="center">
   <a href="https://github.com/HypnosysNyx/myspoti/releases"><b>⬇ 查看中文版 APK / 发布记录</b></a> ·
+  <a href="docs/releases/v2.0.2-beta.3-zh.1.md"><b>📄 中文版发布说明</b></a> ·
   <a href="https://github.com/HypnosysNyx/myspoti/tree/i18n/zh-hans"><b>🀄 汉化源代码</b></a> ·
   <a href="https://github.com/HypnosysNyx/myspoti/issues"><b>🐛 问题反馈</b></a> ·
   <a href="README.en.md"><b>English / 原版 README</b></a>
